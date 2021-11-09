@@ -27,9 +27,9 @@ export default function Feedback() {
     <div className={s.container}>
       <Section title="Please leave your feedback">
         <FeedbackOptions
-          onGood={() => setGood(good + 1)}
-          onNeutral={() => setNeutral(neutral + 1)}
-          onBad={() => setBad(bad + 1)}
+          onGood={() => setGood(prevState => prevState + 1)}
+          onNeutral={() => setNeutral(prevState => prevState + 1)}
+          onBad={() => setBad(prevState => prevState + 1)}
         />
       </Section>
 
